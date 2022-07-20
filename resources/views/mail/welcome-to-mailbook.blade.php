@@ -40,10 +40,11 @@ public function boot(): void
 
 and register it in `config/app.php`.
 
-```php{4} 'providers' => [
+```php{5}
+'providers' => [
     /*
-    * Application Service Providers...
-    */
+     * Application Service Providers...
+     */
     App\Providers\MailbookProvider::class,
 ],
 ```
