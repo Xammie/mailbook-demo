@@ -1,0 +1,8 @@
+{
+  "name": "mailbook-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "shiki": "^0.10.1"
+  }
+}
