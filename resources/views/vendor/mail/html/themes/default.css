@@ -326,3 +326,7 @@ pre code {
     transition: all 250ms;
     filter: blur(0);
 }
+
+a {
+    cursor: pointer;
+}
