@@ -294,7 +294,7 @@ pre {
     padding: 8px 12px;
     background-color: #1a202c;
     color: #fff;
-    overflow:scroll;
+    overflow: auto;
     max-width: 570px;
 }
 
