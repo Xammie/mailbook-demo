@@ -13,6 +13,7 @@ usage:
 
 init: do_composer do_init do_ide_helpers
 update: do_composer do_ide_helpers
+test: do_test
 format: do_format
 
 # ===========================
@@ -26,6 +27,9 @@ do_init:
 
 do_composer:
 		composer install
+
+do_test:
+		./vendor/bin/pest
 
 do_format:
 		./vendor/bin/pint
