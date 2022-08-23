@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6935dcd099942fa7564b59059cc3f4e1",
+    "content-hash": "1a6299cbe35d7a196be6348331253fd8",
     "packages": [
         {
             "name": "brick/math",
@@ -891,16 +891,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.25.1",
+            "version": "v9.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109"
+                "reference": "53e20ba7c4df1d1628102811f5b7119e138247f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e8af8c2212e3717757ea7f459a655a2e9e771109",
-                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/53e20ba7c4df1d1628102811f5b7119e138247f8",
+                "reference": "53e20ba7c4df1d1628102811f5b7119e138247f8",
                 "shasum": ""
             },
             "require": {
@@ -1067,7 +1067,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-08-16T16:36:05+00:00"
+            "time": "2022-08-23T13:31:34+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5379,16 +5379,16 @@
         },
         {
             "name": "xammie/mailbook",
-            "version": "0.0.7",
+            "version": "0.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Xammie/mailbook.git",
-                "reference": "b39f5f64f7e58ee4ae65a6451206e7540d1e51da"
+                "reference": "175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/b39f5f64f7e58ee4ae65a6451206e7540d1e51da",
-                "reference": "b39f5f64f7e58ee4ae65a6451206e7540d1e51da",
+                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3",
+                "reference": "175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3",
                 "shasum": ""
             },
             "require": {
@@ -5446,9 +5446,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Xammie/mailbook/issues",
-                "source": "https://github.com/Xammie/mailbook/tree/0.0.7"
+                "source": "https://github.com/Xammie/mailbook/tree/0.0.8"
             },
-            "time": "2022-08-08T14:28:16+00:00"
+            "time": "2022-08-23T15:55:09+00:00"
         }
     ],
     "packages-dev": [
