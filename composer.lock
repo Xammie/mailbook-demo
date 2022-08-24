@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a6299cbe35d7a196be6348331253fd8",
+    "content-hash": "7d5be5cc7d0964dd0be13a13cd3fb6df",
     "packages": [
         {
             "name": "brick/math",
@@ -5379,16 +5379,16 @@
         },
         {
             "name": "xammie/mailbook",
-            "version": "0.0.8",
+            "version": "0.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Xammie/mailbook.git",
-                "reference": "175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3"
+                "reference": "2c050a173d05738e54dff327744009255febbfeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3",
-                "reference": "175e7fe73c1e1e455c6d3b1758fdbc0a1f6258c3",
+                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/2c050a173d05738e54dff327744009255febbfeb",
+                "reference": "2c050a173d05738e54dff327744009255febbfeb",
                 "shasum": ""
             },
             "require": {
@@ -5446,9 +5446,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Xammie/mailbook/issues",
-                "source": "https://github.com/Xammie/mailbook/tree/0.0.8"
+                "source": "https://github.com/Xammie/mailbook/tree/0.0.9"
             },
-            "time": "2022-08-23T15:55:09+00:00"
+            "time": "2022-08-24T10:11:20+00:00"
         }
     ],
     "packages-dev": [
