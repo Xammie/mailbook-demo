@@ -11,6 +11,7 @@ class WelcomeToMailbook extends Mailable
         return $this
             ->markdown('mail.welcome-to-mailbook')
             ->from(config('mail.from.address'), config('mail.from.name'))
+            ->replyTo('questions@mailbook.dev', 'Mailbook')
             ->subject('Explore your Laravel mails');
     }
 }
