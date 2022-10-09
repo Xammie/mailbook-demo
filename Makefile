@@ -5,6 +5,8 @@ info: usage
 usage:
 		@echo "  make init                                 Initialise the project"
 		@echo "  make update                               Update the project"
+		@echo "  make test                                 Run tests"
+		@echo "  make coverage                             Run tests with coverage"
 		@echo "  make format                               Fix codestyle issues"
 
 # ===========================
@@ -14,6 +16,7 @@ usage:
 init: do_composer do_init do_ide_helpers
 update: do_composer do_ide_helpers
 test: do_test
+coverage: do_coverage
 format: do_format
 
 # ===========================
@@ -30,6 +33,9 @@ do_composer:
 
 do_test:
 		./vendor/bin/pest
+
+do_coverage:
+		XDEBUG_MODE=coverage ./vendor/bin/pest --coverage
 
 do_format:
 		./vendor/bin/pint
