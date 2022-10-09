@@ -11,7 +11,7 @@
         "laravel/tinker": "^2.7.2",
         "spatie/laravel-markdown": "^2.2.4",
         "spatie/shiki-php": "^1.3",
-        "xammie/mailbook": "^1.2"
+        "xammie/mailbook": "^1.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",
