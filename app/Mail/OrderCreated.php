@@ -4,12 +4,16 @@ namespace App\Mail;
 
 use Illuminate\Mail\Mailable;
 
-class NewOrder extends Mailable
+class OrderCreated extends Mailable
 {
     public function build(): self
     {
+        $this->theme = 'shop';
+
         return $this
-            ->markdown('mail.new-order')
+            ->mailer('mailgun')
+            ->tag('order-created')
+            ->markdown('mail.order-created')
             ->subject(__('Order confirmation'))
             ->to('user@mailbook.dev', 'S. Hopper')
             ->bcc('manager@mailbook.dev', 'CEO')

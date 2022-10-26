@@ -1,20 +1,30 @@
 @component('mail::message')
-# Hello
+# {{ __('Thank you for your order') }}
 
-We have great news your order has been shipped and is estimated to arrive in 2 workdays.
+{{ __('Your order has been processed and is now being shipped. Your order details are shown below for your reference:') }}
+
+@component('mail::table')
+| {{ __('Product') }} | {{ __('Quantity') }} | {{ __('Price') }} |
+|:---------------------|:------------------:|------------------:|
+@foreach ($products as $product)
+| {{ $product['name'] }} | {{ $product['quantity'] }} | {{ $product['price'] }} |
+@endforeach
+@endcomponent
 
 @if($withTracker)
-You can track it here with the following link.
+{{ __('You can track it here with the following link.') }}
 @component('mail::button')
-Track your package
+{{ __('Track your package') }}
 @endcomponent
 @slot('subcopy')
-    If you are having trouble clicking the "Track your package" button, copy and paste the URL below into your web browser:<br><a href="https://mailbook.dev/" target="_blank">https://mailbook.dev/</a>
+{{ __('If you are having trouble clicking the "Track your package" button, copy and paste the URL below into your web browser:') }}<br><a href="https://mailbook.dev/" target="_blank">https://mailbook.dev/</a>
 @endslot
 @else
-It has been shipped without a tracking link
+{{ __('It has been shipped without a tracking link') }}
 @endif
 
-Thanks,<br>
-{{ config('app.name') }}
+## {{ __('Address') }}
+S. Hopper<br>
+1234 Main St<br>
+Anytown, CA 12345
 @endcomponent

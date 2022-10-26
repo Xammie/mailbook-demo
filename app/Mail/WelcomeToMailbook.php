@@ -23,7 +23,7 @@ class WelcomeToMailbook extends Mailable
             ->markdown('mail.welcome-to-mailbook')
             ->from(config('mail.from.address'), config('mail.from.name'))
             ->replyTo('questions@mailbook.dev', 'Mailbook')
-            ->subject('Explore your Laravel mails')
+            ->subject(__('Explore your Laravel mails'))
             ->with([
                 'readme' => $readme,
             ]);

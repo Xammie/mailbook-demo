@@ -1,0 +1,18 @@
+{
+  "Order confirmation": "Bestellbestätigung",
+  "Thank you for your order": "Vielen Dank für Ihren Auftrag",
+  "Explore your Laravel mails": "Erkunden Sie Ihre Laravel-Mails",
+  "Your order has been received and is now being processed. Your order details are shown below for your reference:": "Ihre Bestellung wurde erhalten und wird nun bearbeitet. Ihre Bestelldetails finden Sie unten für Ihre Referenz:",
+  "Your order has been processed and is now being shipped. Your order details are shown below for your reference:": "Ihre Bestellung wurde bearbeitet und wird nun versendet. Ihre Bestelldetails werden unten als Referenz angezeigt:",
+  "Product": "Produkt",
+  "Quantity": "Menge",
+  "Price": "Preis",
+  "Laravel mug": "Laravel-Becher",
+  "Laravel shirt": "Laravel-Shirt",
+  "Address": "die Anschrift",
+  "Order has been shipped": "Bestellung wurde versandt",
+  "You can track it here with the following link.": "Sie können es hier mit dem folgenden Link verfolgen.",
+  "Track your package": "Verfolgen Sie Ihre Paket",
+  "It has been shipped without a tracking link": "Es wurde ohne einen Tracking-Link versandt",
+  "If you are having trouble clicking the \"Track your package\" button, copy and paste the URL below into your web browser:": "Wenn Sie Probleme haben, auf die Schaltfläche \"Verfolgen Sie Ihr Paket\" zu klicken, kopieren und fügen Sie die unten stehende URL in Ihren Webbrowser ein:"
+}

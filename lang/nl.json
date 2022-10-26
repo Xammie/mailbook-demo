@@ -1,0 +1,18 @@
+{
+  "Order confirmation": "Orderbevestiging",
+  "Thank you for your order": "Bedankt voor je bestelling",
+  "Explore your Laravel mails": "Verken je Laravel mails",
+  "Your order has been received and is now being processed. Your order details are shown below for your reference:": "Je bestelling is ontvangen en wordt nu verwerkt. Je bestelgegevens staan hieronder voor je referentie:",
+  "Your order has been processed and is now being shipped. Your order details are shown below for your reference:": "Je bestelling is verwerkt en wordt nu verzonden. Je bestelgegevens staan hieronder voor je referentie:",
+  "Product": "Product",
+  "Quantity": "Aantal",
+  "Price": "Prijs",
+  "Laravel mug": "Laravel mok",
+  "Laravel t-shirt": "Laravel t-shirt",
+  "Address": "Adres",
+  "Order has been shipped": "Bestelling is verzonden",
+  "You can track it here with the following link.": "Volg je bestelling hier met de volgende link.",
+  "Track your package": "Track je pakket",
+  "It has been shipped without a tracking link": "Het is verzonden zonder een tracking link",
+  "If you are having trouble clicking the \"Track your package\" button, copy and paste the URL below into your web browser:": "Als je problemen hebt met het klikken op de \"Track je pakket\" knop, kopieer en plak dan de URL hieronder in je webbrowser:"
+}
