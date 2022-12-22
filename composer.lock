@@ -899,16 +899,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.45.0",
+            "version": "v9.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe"
+                "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe",
-                "reference": "f2c51fdfcb0c50c19cdc49c2e82690ad1a21eafe",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/faeb20d3fc61b69790068161ab42bcf2d5faccbc",
+                "reference": "faeb20d3fc61b69790068161ab42bcf2d5faccbc",
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1081,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-12-20T14:16:06+00:00"
+            "time": "2022-12-21T19:37:46+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5572,36 +5572,37 @@
         },
         {
             "name": "xammie/mailbook",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Xammie/mailbook.git",
-                "reference": "5030c9f7d09e3c7e5a3096e22d661198bc6f67af"
+                "reference": "f20dd9ce3086eb8a31ef7636caf8f260eecf4db2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/5030c9f7d09e3c7e5a3096e22d661198bc6f67af",
-                "reference": "5030c9f7d09e3c7e5a3096e22d661198bc6f67af",
+                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/f20dd9ce3086eb8a31ef7636caf8f260eecf4db2",
+                "reference": "f20dd9ce3086eb8a31ef7636caf8f260eecf4db2",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^8.0|^9.0",
+                "illuminate/contracts": "^9.0",
                 "php": "^8.0|^8.1",
                 "spatie/laravel-package-tools": "^1.9.2"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.8",
                 "infection/infection": "^0.26.13",
                 "laravel/pint": "^0.2.3",
-                "nunomaduro/collision": "^5.0|^6.0",
-                "nunomaduro/larastan": "^1.0|^2.2",
-                "orchestra/testbench": "^6.0|^7.0",
+                "nunomaduro/collision": "^6.0",
+                "nunomaduro/larastan": "^2.2",
+                "nunomaduro/phpinsights": "^2.6",
+                "orchestra/testbench": "^7.0",
                 "pestphp/pest": "^1.21",
                 "pestphp/pest-plugin-laravel": "^1.1",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpunit/phpunit": "^9.5",
+                "rector/rector": "^0.15.1",
                 "spatie/invade": "^1.1"
             },
             "type": "library",
@@ -5640,9 +5641,15 @@
             ],
             "support": {
                 "issues": "https://github.com/Xammie/mailbook/issues",
-                "source": "https://github.com/Xammie/mailbook/tree/1.4.1"
+                "source": "https://github.com/Xammie/mailbook/tree/1.5.0"
             },
-            "time": "2022-12-20T15:55:07+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/xammie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-22T14:36:28+00:00"
         }
     ],
     "packages-dev": [

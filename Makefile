@@ -18,6 +18,7 @@ update: do_composer do_ide_helpers
 test: do_test
 coverage: do_coverage
 format: do_format
+package: do_composer do_local_package
 
 # ===========================
 # Recipes
@@ -44,3 +45,7 @@ do_ide_helpers:
 		php artisan ide-helper:generate
 		php artisan ide-helper:models --nowrite
 		php artisan ide-helper:meta
+
+do_local_package:
+		composer config repositories.mailbook '{"type": "path", "url": "../mailbook"}' --file composer.json
+		composer require xammie/mailbook @dev
