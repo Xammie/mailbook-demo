@@ -32,3 +32,14 @@ it('can render all mailables', function (string $locale) {
         'nl',
         'de',
     ]);
+
+it('can render homepage', function () {
+    Http::fake([
+        'https://raw.githubusercontent.com/Xammie/mailbook/main/README.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/README.md'),
+    ]);
+
+    $response = $this->get('/mailbook?locale=de&selected=app%5Cmail%5Cordercreated');
+
+    $response->assertOk();
+})
+->only();
