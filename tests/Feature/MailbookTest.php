@@ -41,5 +41,4 @@ it('can render homepage', function () {
     $response = $this->get('/mailbook?locale=de&selected=app%5Cmail%5Cordercreated');
 
     $response->assertOk();
-})
-->only();
+});
