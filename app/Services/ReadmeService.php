@@ -19,7 +19,9 @@ class ReadmeService
 
     public function fresh(): string
     {
-        Cache::forget('mailbook-readme');
+        $result = $this->fetch();
+
+        Cache::set('mailbook-readme', $result);
 
         return $this->retrieve();
     }

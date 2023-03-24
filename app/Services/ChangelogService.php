@@ -19,7 +19,9 @@ class ChangelogService
 
     public function fresh(): string
     {
-        Cache::forget('mailbook-changelog');
+        $result = $this->fetch();
+
+        Cache::set('mailbook-changelog', $result);
 
         return $this->retrieve();
     }
