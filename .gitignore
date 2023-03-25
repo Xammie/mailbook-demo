@@ -7,8 +7,9 @@
 /public/mix-manifest.json
 /storage/*.key
 /storage/coverage
-storage/framework/laravel-excel
+/storage/framework/laravel-excel
 /vendor
+/coverage
 .env
 .env.backup
 .env.testing

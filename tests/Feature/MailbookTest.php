@@ -42,3 +42,7 @@ it('can render homepage', function () {
 
     $response->assertOk();
 });
+
+it('will redirect')
+    ->get('/')
+    ->assertRedirect('/mailbook');
