@@ -9,6 +9,7 @@ usage:
 		@echo "  make coverage                             Run tests with coverage"
 		@echo "  make format                               Fix codestyle issues"
 		@echo "  make analyse                              Analyse php code"
+		@echo "  make rector                               Run rector"
 
 # ===========================
 # Commands
@@ -21,6 +22,7 @@ coverage: do_coverage
 format: do_format
 package: do_composer do_local_package
 analyse: do_phpstan
+rector: do_rector
 
 # ===========================
 # Recipes
@@ -55,3 +57,6 @@ do_local_package:
 
 do_phpstan:
 		./vendor/bin/phpstan analyse
+
+do_rector:
+		./vendor/bin/rector process
