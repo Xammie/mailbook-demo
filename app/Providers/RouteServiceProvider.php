@@ -11,7 +11,7 @@ class RouteServiceProvider extends ServiceProvider
     #[Override]
     public function boot(): void
     {
-        $this->routes(function () {
+        $this->routes(function (): void {
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });

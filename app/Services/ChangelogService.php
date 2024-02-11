@@ -9,7 +9,7 @@ class ChangelogService
 {
     public function retrieve(): string
     {
-        return Cache::rememberForever('mailbook-changelog', fn () => $this->fetch());
+        return Cache::rememberForever('mailbook-changelog', fn (): string => $this->fetch());
     }
 
     public function fetch(): string

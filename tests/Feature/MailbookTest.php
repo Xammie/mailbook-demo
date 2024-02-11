@@ -2,7 +2,7 @@
 
 use Xammie\Mailbook\Facades\Mailbook;
 
-it('can render all mailables', function (string $locale) {
+it('can render all mailables', function (string $locale): void {
     Http::fake([
         'https://raw.githubusercontent.com/Xammie/mailbook/main/README.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/README.md'),
         'https://raw.githubusercontent.com/Xammie/mailbook/main/CHANGELOG.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/CHANGELOG.md'),
@@ -33,7 +33,7 @@ it('can render all mailables', function (string $locale) {
         'de',
     ]);
 
-it('can render homepage', function () {
+it('can render homepage', function (): void {
     Http::fake([
         'https://raw.githubusercontent.com/Xammie/mailbook/main/README.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/README.md'),
     ]);

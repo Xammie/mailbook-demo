@@ -9,7 +9,7 @@ class ReadmeService
 {
     public function retrieve(): string
     {
-        return Cache::rememberForever('mailbook-readme', fn () => $this->fetch());
+        return Cache::rememberForever('mailbook-readme', fn (): string => $this->fetch());
     }
 
     public function fetch(): string
