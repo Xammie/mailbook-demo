@@ -1,8 +1,5 @@
 @component('mail::message')
-# Hello user,
+# {{ __('Hello user') }},
 
-Thank you for creating an account with us.
-
-Thanks,<br>
-{{ config('app.name') }}
+{{ __('Thank you for creating an account with us.') }}
 @endcomponent

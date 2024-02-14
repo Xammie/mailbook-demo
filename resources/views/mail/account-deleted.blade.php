@@ -1,8 +1,5 @@
 @component('mail::message')
-# Hello user,
+# {{ __('Hello user') }},
 
-Your account has been deleted. We're sorry to see you go.
-
-Thanks,<br>
-{{ config('app.name') }}
+{{ __('Your account has been deleted. We\'re sorry to see you go.') }}
 @endcomponent

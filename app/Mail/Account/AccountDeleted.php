@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Mail;
+declare(strict_types=1);
+
+namespace App\Mail\Account;
 
 use Illuminate\Mail\Mailable;
 
@@ -10,7 +12,7 @@ class AccountDeleted extends Mailable
     {
         return $this
             ->markdown('mail.account-deleted')
-            ->subject('Your account has been deleted')
+            ->subject(__('Your account has been deleted'))
             ->to('user1@example.com', 'User')
             ->to('user2@example.com', 'User');
     }
