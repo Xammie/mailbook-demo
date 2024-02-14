@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Xammie\Mailbook\Facades\Mailbook;
 
 it('can render all mailables', function (string $locale): void {

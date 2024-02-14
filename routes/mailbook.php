@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Mail\Account\AccountCreated;
 use App\Mail\Account\AccountDeleted;
 use App\Mail\Changelog;
