@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 use Xammie\Mailbook\Facades\Mailbook;
 
+use function Pest\Laravel\get;
+
+it('can render mailbook', function (): void {
+    Http::fake([
+        'https://raw.githubusercontent.com/Xammie/mailbook/main/README.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/README.md'),
+    ]);
+
+    get('/mailbook')->assertOk();
+});
+
 it('can render all mailables', function (string $locale): void {
     Http::fake([
         'https://raw.githubusercontent.com/Xammie/mailbook/main/README.md' => Http::response(__DIR__.'/../../vendor/xammie/mailbook/README.md'),
