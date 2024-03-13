@@ -16,13 +16,14 @@ usage:
 # ===========================
 
 init: do_composer do_init do_ide_helpers
-update: do_composer do_ide_helpers
+update: do_composer do_ide_helpers do_clear
 test: do_test
 coverage: do_coverage
 format: do_format
 package: do_composer do_local_package
 analyse: do_phpstan
 rector: do_rector
+clear: do_clear
 
 # ===========================
 # Recipes
@@ -60,3 +61,6 @@ do_phpstan:
 
 do_rector:
 		./vendor/bin/rector process
+
+do_clear:
+		php artisan cache:clear

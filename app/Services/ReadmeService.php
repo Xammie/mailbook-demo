@@ -25,6 +25,6 @@ class ReadmeService
 
         Cache::set('mailbook-readme', $result);
 
-        return $this->retrieve();
+        return $result;
     }
 }
