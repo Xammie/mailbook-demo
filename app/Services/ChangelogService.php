@@ -25,6 +25,6 @@ class ChangelogService
 
         Cache::set('mailbook-changelog', $result);
 
-        return $this->retrieve();
+        return $result;
     }
 }
