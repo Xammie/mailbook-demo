@@ -9,9 +9,7 @@ use Illuminate\Mail\Mailable;
 
 class Changelog extends Mailable
 {
-    public function __construct(private readonly ChangelogService $changelogService)
-    {
-    }
+    public function __construct(private readonly ChangelogService $changelogService) {}
 
     public function build(): self
     {

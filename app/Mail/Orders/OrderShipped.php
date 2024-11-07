@@ -8,9 +8,7 @@ use Illuminate\Mail\Mailable;
 
 class OrderShipped extends Mailable
 {
-    public function __construct(public readonly bool $withTracker)
-    {
-    }
+    public function __construct(public readonly bool $withTracker) {}
 
     public function build(): self
     {

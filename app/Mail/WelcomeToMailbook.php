@@ -9,9 +9,7 @@ use Illuminate\Mail\Mailable;
 
 class WelcomeToMailbook extends Mailable
 {
-    public function __construct(private readonly ReadmeService $readmeService)
-    {
-    }
+    public function __construct(private readonly ReadmeService $readmeService) {}
 
     public function build(): self
     {
