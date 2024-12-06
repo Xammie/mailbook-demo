@@ -21,12 +21,14 @@ class OrderCreated extends Mailable
             ->bcc('manager@mailbook.dev', 'CEO')
             ->with('products', [
                 [
+                    'image' => '/images/mug.webp',
                     'name' => __('Laravel mug'),
                     'quantity' => 10,
                     'price' => '$ 100',
                 ],
                 [
-                    'name' => __('Laravel shirt'),
+                    'image' => '/images/cap.webp',
+                    'name' => __('Laravel snapback'),
                     'quantity' => 2,
                     'price' => '$ 50',
                 ],

@@ -4,10 +4,10 @@
 {{ __('Your order has been processed and is now being shipped. Your order details are shown below for your reference:') }}
 
 @component('mail::table')
-| {{ __('Product') }} | {{ __('Quantity') }} | {{ __('Price') }} |
-|:---------------------|:------------------:|------------------:|
+|  | {{ __('Product') }} | {{ __('Quantity') }} | {{ __('Price') }} |
+|:---------------------|:---------------------|:------------------:|------------------:|
 @foreach ($products as $product)
-| {{ $product['name'] }} | {{ $product['quantity'] }} | {{ $product['price'] }} |
+| <img src="{{ $message->embed(public_path($product['image'])) }}" height="64px" alt="{{ $product['name'] }}"> |{{ $product['name'] }} | {{ $product['quantity'] }} | {{ $product['price'] }} |
 @endforeach
 @endcomponent
 
