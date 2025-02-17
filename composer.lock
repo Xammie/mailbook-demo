@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1b5626fa8eb3c60401a5462f6e039f6",
+    "content-hash": "db0defcf5be299c4376ae2beea5f483b",
     "packages": [
         {
             "name": "brick/math",
@@ -6526,38 +6526,38 @@
         },
         {
             "name": "xammie/mailbook",
-            "version": "1.8.4",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Xammie/mailbook.git",
-                "reference": "e39385cab314f2c67d45ff56abda58e5665c5544"
+                "reference": "7eba0a9326a305b5297967e1b1505d1584b0a6d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/e39385cab314f2c67d45ff56abda58e5665c5544",
-                "reference": "e39385cab314f2c67d45ff56abda58e5665c5544",
+                "url": "https://api.github.com/repos/Xammie/mailbook/zipball/7eba0a9326a305b5297967e1b1505d1584b0a6d8",
+                "reference": "7eba0a9326a305b5297967e1b1505d1584b0a6d8",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^9.0 || ^10.0 || ^11.0",
+                "illuminate/contracts": "^9.0 || ^10.0 || ^11.0 || ^12.0",
                 "php": "^8.0",
                 "spatie/laravel-package-tools": "^1.9.2"
             },
             "require-dev": {
-                "infection/infection": "^0.26.13",
-                "larastan/larastan": "^2.8",
+                "larastan/larastan": "^3.0",
                 "laravel/pint": "^v1.4.1",
                 "nunomaduro/collision": "^6.0 || ^7.0 || ^8.0",
                 "nunomaduro/phpinsights": "^2.6",
-                "orchestra/testbench": "^7.0 || ^8.0",
-                "pestphp/pest": "^1.22 || ^2.0",
+                "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+                "pestphp/pest": "^1.22 || ^2.0 || ^3.7",
                 "pestphp/pest-plugin-laravel": "^1.1 || ^2.0 || ^3.0",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "rector/rector": "^0.15.1",
-                "spatie/invade": "^1.1",
-                "tomasvotruba/bladestan": "^0.1.0"
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "rector/rector": "^2.0",
+                "spatie/invade": "^1.1 || ^2.1",
+                "tomasvotruba/bladestan": "^0.10.0"
             },
             "type": "library",
             "extra": {
@@ -6595,7 +6595,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Xammie/mailbook/issues",
-                "source": "https://github.com/Xammie/mailbook/tree/1.8.4"
+                "source": "https://github.com/Xammie/mailbook/tree/1.9.0"
             },
             "funding": [
                 {
@@ -6603,7 +6603,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-21T17:16:14+00:00"
+            "time": "2025-02-17T21:55:12+00:00"
         }
     ],
     "packages-dev": [

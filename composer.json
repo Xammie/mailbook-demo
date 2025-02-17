@@ -12,7 +12,7 @@
         "sentry/sentry-laravel": "^4.11.0",
         "spatie/laravel-markdown": "^2.7.0",
         "spatie/shiki-php": "^2.2.2",
-        "xammie/mailbook": "^1.8.4"
+        "xammie/mailbook": "^1.9"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.14.10",
