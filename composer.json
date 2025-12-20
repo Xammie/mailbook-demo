@@ -7,20 +7,20 @@
     "require": {
         "php": "^8.3",
         "guzzlehttp/guzzle": "^7.10.0",
-        "laravel/framework": "^11.46.0",
-        "laravel/tinker": "^2.10.1",
-        "sentry/sentry-laravel": "^4.16.0",
+        "laravel/framework": "^11.47.0",
+        "laravel/tinker": "^2.10.2",
+        "sentry/sentry-laravel": "^4.20.0",
         "spatie/laravel-markdown": "^2.7.1",
         "spatie/shiki-php": "^2.3.2",
-        "xammie/mailbook": "^1.10"
+        "xammie/mailbook": "^1.10.1"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.16.0",
-        "barryvdh/laravel-ide-helper": "^3.6.0",
+        "barryvdh/laravel-debugbar": "^3.16.2",
+        "barryvdh/laravel-ide-helper": "^3.6.1",
         "fakerphp/faker": "^1.24.1",
         "larastan/larastan": "^2.11.2",
-        "laravel/pint": "^1.25.1",
-        "laravel/sail": "^1.45.0",
+        "laravel/pint": "^1.26.0",
+        "laravel/sail": "^1.51.0",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.5.0",
         "pestphp/pest": "^2.36.0",
