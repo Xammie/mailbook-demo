@@ -1,0 +1,162 @@
+#!/bin/bash
+# =========================================================
+# Taskfile gives you a set of quick tasks for your project
+# More info: https://github.com/Enrise/Taskfile
+# =========================================================
+
+function banner {
+	echo -e "${BLUE}\n"\
+	"▗▖  ▗▖ ▗▄▖ ▗▄▄▄▖▗▖   ▗▄▄▖  ▗▄▖  ▗▄▖ ▗▖ ▗▖   ▗▄▄▄ ▗▄▄▄▖▗▖  ▗▖ ▗▄▖ \n"\
+	"▐▛▚▞▜▌▐▌ ▐▌  █  ▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌▗▞▘   ▐▌  █▐▌   ▐▛▚▞▜▌▐▌ ▐▌\n"\
+	"▐▌  ▐▌▐▛▀▜▌  █  ▐▌   ▐▛▀▚▖▐▌ ▐▌▐▌ ▐▌▐▛▚▖    ▐▌  █▐▛▀▀▘▐▌  ▐▌▐▌ ▐▌\n"\
+	"▐▌  ▐▌▐▌ ▐▌▗▄█▄▖▐▙▄▄▖▐▙▄▞▘▝▚▄▞▘▝▚▄▞▘▐▌ ▐▌   ▐▙▄▄▀▐▙▄▄▖▐▌  ▐▌▝▚▄▞▘${RESET}"
+}
+
+# =========================================================
+## Project
+# =========================================================
+
+function task:init { ## Initialise the project for local development
+	# Ensure .env is present
+	test -f .env || cp .env.example .env
+	sail composer install
+	sail artisan key:generate
+	sail artisan storage:link
+	task:ide_helpers
+	task:help
+}
+
+function task:start { ## Start the project in development mode
+	title "Run development application"
+	sail up -d
+}
+
+function task:update { ## Update all dependencies and files
+	project:update
+}
+
+function project:update {
+	title "Run project updates"
+	sail composer install
+	task:ide_helpers
+	task:clear
+}
+
+# Add more project specific functions here
+
+function task:stop { ## Stop and remove Sail containers
+	title "Stopping Docker containers"
+	sail down
+}
+
+function task:build { ## Build (rebuild) Sail containers
+	title "Rebuilding Docker containers"
+	sail build --no-cache
+}
+
+function task:shell { ## Open a shell in the Sail container
+	title "Opening a shell in Sail container"
+	sail shell
+}
+
+function task:test { ## Run Pest tests
+	title "Test"
+	sail pest
+}
+
+function task:coverage { ## Run tests with coverage
+	title "Test with coverage"
+	SAIL_XDEBUG_MODE=coverage sail pest --coverage --coverage-html=./coverage
+	@echo "Open coverage ./coverage/index.html"
+}
+
+function task:format { ## Run Pint code formatter
+	title "Format"
+	sail pint
+}
+
+function task:analyse { ## Run PHPStan analysis
+	title "Analyse PHP code"
+	sail php ./vendor/bin/phpstan analyse
+}
+
+function task:rector { ## Run Rector
+	title "Run Rector"
+	sail php ./vendor/bin/rector process
+}
+
+function task:package { ## Package local mailbook package
+	title "Package mailbook (local path)"
+	sail composer config repositories.mailbook '{"type": "path", "url": "../mailbook"}' --file composer.json
+	sail composer require xammie/mailbook @dev
+}
+
+function task:ide_helpers { ## Generate IDE helpers
+	title "Generate IDE helpers"
+	sail artisan ide-helper:generate
+	sail artisan ide-helper:models --nowrite
+	sail artisan ide-helper:meta
+}
+
+function task:clear { ## Clear Laravel cache
+	title "Clear Laravel cache"
+	sail artisan cache:clear
+}
+
+function task:artisan { ## Run arbitrary artisan commands (usage: ./Taskfile artisan migrate)
+	title "Run artisan $*"
+	sail artisan "$@"
+}
+
+function task:composer { ## Run arbitrary composer commands (usage: ./Taskfile composer <cmd>)
+	title "Run composer $*"
+	sail composer "$@"
+}
+
+function sail() {
+  ./vendor/bin/sail "$@"
+}
+
+# =========================================================
+## Taskfile
+# =========================================================
+
+set -eo pipefail
+
+BLUE=$(printf '\033[36m')
+YELLOW=$(printf '\033[33m')
+RED=$(printf '\033[31m')
+GREEN=$(printf '\033[32m')
+RESET=$(printf '\033[0m')
+
+# Define global variables here
+
+function title {
+	echo -e "\n${BLUE}=>${RESET} $1\n"
+}
+
+function task:help { ## Show all available tasks
+	title "Available tasks"
+	awk 'BEGIN {FS = " { [#][#][ ]?"} /^([a-zA-Z_-]*:?.*)(\{ )?[#][#][ ]?/ \
+		{printf "\033[33m%-34s\033[0m %s\n", $1, $2}' $0 |\
+		sed -E "s/[#]{2,}[ ]*/${RESET}/g" |\
+		sed -E "s/function task:*/  /g"
+	echo -e "\n${BLUE}Usage:${RESET} ./Taskfile ${YELLOW}<task>${RESET} <args>"
+}
+
+function task:shorthand { ## Create CLI shorthand task instead of ./Taskfile
+	title "Creating task shorthand"
+	echo -e "You're about to create ${YELLOW}/usr/local/bin/task${RESET} that requires ${RED}root${RESET} permission..."
+	sudo curl --location --silent --output /usr/local/bin/task https://enri.se/taskfile-bin
+	sudo chmod +x /usr/local/bin/task
+	echo -e "${BLUE}You can now use:${RESET} task ${YELLOW}<task>${RESET} <args>"
+}
+
+banner
+if [[ ! "$(declare -F task:${@-help})" ]]; then
+	title "Task not found"
+	echo -e "Task ${RED}$1${RESET} doesn't exist."
+	task:help
+	exit 1
+fi
+task:${@-help}
