@@ -291,44 +291,6 @@ img {
     word-break: break-all;
 }
 
-pre {
-    border-radius: 8px;
-    padding: 8px 12px;
-    background-color: #1a202c;
-    color: #fff;
-    overflow: auto;
-    max-width: 570px;
-}
-
-pre code {
-    font-size: 16px;
-}
-
-.shiki .highlight {
-    background-color: #4a5568;
-    padding: 3px 0;
-}
-
-.shiki .add {
-    background-color: hsl(136, 100%, 96%);
-    padding: 3px 0;
-}
-
-.shiki .del {
-    background-color: hsl(354, 100%, 96%);
-    padding: 3px 0;
-}
-
-.shiki.focus .line:not(.focus) {
-    transition: all 250ms;
-    filter: blur(2px);
-}
-
-.shiki.focus:hover .line {
-    transition: all 250ms;
-    filter: blur(0);
-}
-
 a {
     cursor: pointer;
 }

@@ -18,7 +18,7 @@ class Changelog extends Mailable
             ->subject('Changelog')
             ->to('developers@mailbook.dev', 'Developers')
             ->with([
-                'changelog' => $this->changelogService->retrieve(),
+                'content' => $this->changelogService->render(),
             ]);
     }
 }

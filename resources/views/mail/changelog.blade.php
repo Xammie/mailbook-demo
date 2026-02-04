@@ -1,5 +1,3 @@
 @component('mail::message')
-<x-markdown>
-{!! $changelog !!}
-</x-markdown>
+{!! $content !!}
 @endcomponent
