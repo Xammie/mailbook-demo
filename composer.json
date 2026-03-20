@@ -7,27 +7,27 @@
     "require": {
         "php": "^8.5",
         "guzzlehttp/guzzle": "^7.10.0",
-        "laravel/framework": "^12.49",
-        "laravel/tinker": "^2.11.0",
-        "league/commonmark": "^2.8",
-        "sentry/sentry-laravel": "^4.20.1",
-        "tempest/highlight": "^2.14",
+        "laravel/framework": "^12.55.1",
+        "laravel/tinker": "^2.11.1",
+        "league/commonmark": "^2.8.2",
+        "sentry/sentry-laravel": "^4.23.0",
+        "tempest/highlight": "^2.17.2",
         "xammie/mailbook": "^1.10.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.16.5",
-        "barryvdh/laravel-ide-helper": "^3.6.1",
+        "barryvdh/laravel-ide-helper": "^3.7.0",
         "fakerphp/faker": "^1.24.1",
-        "larastan/larastan": "^3.9.2",
-        "laravel/pint": "^1.27.0",
-        "laravel/sail": "^1.52",
+        "larastan/larastan": "^3.9.3",
+        "laravel/pint": "^1.29.0",
+        "laravel/sail": "^1.54",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^8.8.3",
-        "pestphp/pest": "^3.8.5",
+        "nunomaduro/collision": "^8.9.1",
+        "pestphp/pest": "^3.8.6",
         "pestphp/pest-plugin-laravel": "^3.2",
-        "rector/rector": "^2.3.5",
-        "spatie/laravel-ignition": "^2.10.0",
-        "tomasvotruba/bladestan": "^0.11.4"
+        "rector/rector": "^2.3.9",
+        "spatie/laravel-ignition": "^2.12.0",
+        "tomasvotruba/bladestan": "^0.11.5"
     },
     "autoload": {
         "psr-4": {
@@ -45,7 +45,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@composer bump"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
