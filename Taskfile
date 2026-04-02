@@ -59,15 +59,15 @@ function task:shell { ## Open a shell in the Sail container
 	sail shell
 }
 
-function task:test { ## Run Pest tests
+function task:test { ## Run tests
 	title "Test"
-	sail pest
+	sail phpunit
 }
 
 function task:coverage { ## Run tests with coverage
 	title "Test with coverage"
-	SAIL_XDEBUG_MODE=coverage sail pest --coverage --coverage-html=./coverage
-	@echo "Open coverage ./coverage/index.html"
+	SAIL_XDEBUG_MODE=coverage sail phpunit --coverage-text --coverage-html=./coverage
+	echo "Open coverage ./coverage/index.html"
 }
 
 function task:format { ## Run Pint code formatter
