@@ -87,7 +87,7 @@ function task:rector { ## Run Rector
 
 function task:package { ## Package local mailbook package
 	title "Package mailbook (local path)"
-	sail composer config repositories.mailbook '{"type": "path", "url": "../mailbook"}' --file composer.json
+	sail composer config repositories.mailbook '{"type": "path", "url": "./local-mailbook"}' --file composer.json
 	sail composer require xammie/mailbook @dev
 }
 

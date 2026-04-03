@@ -19,6 +19,7 @@ services:
             IGNITION_LOCAL_SITES_PATH: '${PWD}'
         volumes:
             - '.:/var/www/html'
+            - '../mailbook:/var/www/html/local-mailbook'
         networks:
             - sail
 
