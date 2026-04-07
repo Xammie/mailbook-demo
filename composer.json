@@ -7,24 +7,24 @@
     "require": {
         "php": "^8.5",
         "guzzlehttp/guzzle": "^7.10.0",
-        "laravel/framework": "^13.3.0",
+        "laravel/framework": "^13.4.0",
         "laravel/tinker": "^3.0",
         "league/commonmark": "^2.8.2",
-        "sentry/sentry-laravel": "^4.24.0",
-        "tempest/highlight": "^2.19.0",
-        "xammie/mailbook": "^1.11"
+        "sentry/sentry-laravel": "^4.25.0",
+        "tempest/highlight": "^2.21.0",
+        "xammie/mailbook": "^1.11.1"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^4.2.2",
+        "barryvdh/laravel-debugbar": "^4.2.4",
         "barryvdh/laravel-ide-helper": "^3.7.0",
         "fakerphp/faker": "^1.24.1",
         "larastan/larastan": "^3.9.3",
         "laravel/pint": "^1.29.0",
         "laravel/sail": "^1.56",
         "mockery/mockery": "^1.6.12",
-        "nunomaduro/collision": "^8.9.2",
-        "phpunit/phpunit": "^12.5.15",
-        "rector/rector": "^2.3.9",
+        "nunomaduro/collision": "^8.9.3",
+        "phpunit/phpunit": "^12.5.16",
+        "rector/rector": "^2.4.0",
         "spatie/laravel-ignition": "^2.12.0"
     },
     "autoload": {
