@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
 use Rector\Php85\Rector\Property\AddOverrideAttributeToOverriddenPropertiesRector;
+use Rector\PHPUnit\CodeQuality\Rector\Class_\PreferTestsWithSnakeCaseRector;
 
 return RectorConfig::configure()
     ->withPreparedSets(
@@ -21,5 +22,6 @@ return RectorConfig::configure()
     ])
     ->withSkip([
         AddOverrideAttributeToOverriddenPropertiesRector::class,
+        PreferTestsWithSnakeCaseRector::class,
     ])
     ->withRootFiles();
